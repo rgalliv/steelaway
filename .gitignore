@@ -1,13 +1,2 @@
-# Local working clones of the Steel-tech org repositories.
-# Each has its own .git directory; committing them would create embedded-repo
-# gitlink stubs rather than real content. Clone them fresh instead:
-#   https://github.com/Steel-tech/Steel-tech
-#   https://github.com/Steel-tech/Bid-Extractor
-#   https://github.com/Steel-tech/IronForge
-#   https://github.com/Steel-tech/Claude-for-Steel-PMs
-#   https://github.com/Steel-tech/SteelCFO
-/Steel-tech/
-/Bid-Extractor/
-/IronForge/
-/Claude-for-Steel-PMs/
-/SteelCFO/
+# Local working clones of other repositories, kept out of version control.
+/repos/
