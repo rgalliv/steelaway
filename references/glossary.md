@@ -9,6 +9,10 @@ Code of Standard Practice.
 **ASI** — Architect's Supplemental Instruction. A clarification or minor change
 issued by the architect.
 
+**Approved for fabrication / A4F** — a controlled status indicating that the
+company's required technical and administrative release conditions are complete.
+The exact release authority and criteria are company- and project-specific.
+
 **Code of Standard Practice** — AISC document establishing default trade
 practice, including division of work. Frequently modified by contract.
 
@@ -36,6 +40,10 @@ position. Governed by the Code of Standard Practice and the contract.
 **Mill certs** — certified mill test reports documenting chemical and mechanical
 properties of supplied steel.
 
+**NCR** — Nonconformance Report. A controlled record of a condition identified
+through the project's quality process; disposition belongs to the authorized
+technical and quality personnel.
+
 **Misc metals** — items outside the structural package: lintels, ladders,
 embeds, supports. The single most disputed boundary in the trade.
 
@@ -54,6 +62,9 @@ permanent connections.
 
 **Shop drawings** — fabrication and erection drawings prepared from the design
 documents and submitted for review.
+
+**SOV** — Schedule of Values. The agreed allocation of contract value used to
+organize progress billing.
 
 **Subpart R** — 29 CFR 1926 Subpart R, the OSHA standard for steel erection.
 

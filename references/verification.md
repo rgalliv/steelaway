@@ -14,6 +14,10 @@ shortest file here and the most important.
 | Any drawing reference | The actual sheet at the actual revision |
 | Any date or duration in a claim | Your own correspondence records |
 | Any quantity | Your takeoff and the drawings |
+| Any release or approval status | The signed record or authorized system of record |
+| Any fabrication, shipment, or field status | The responsible team's current source record |
+| Any billed value or percent complete | Approved project records and accounting controls |
+| Any lift-plan input or revision | The approved plan package and responsible qualified person |
 
 ## Never delegate
 
@@ -23,9 +27,12 @@ people. A prompt can organize the inputs and ask the questions. It cannot decide
 - **Structural adequacy** — engineer of record
 - **Connection design** — the engineer with design responsibility
 - **Erection stability and temporary bracing** — qualified erection engineer
-- **Crane picks and rigging** — qualified rigger and lift planner
+- **Crane setup, capacity, rigging, and lift-plan approval** — responsible qualified people under the governing plan
 - **Hazard determination and JHA approval** — competent person on site
+- **Fabrication or delivery release** — the company's authorized release personnel
 - **Contract enforceability** — counsel
+- **Billing certification and stored-material eligibility** — authorized project and accounting personnel
+- **Contractual completion and acceptance** — the parties authorized by the executed agreement
 - **The number on the bid** — you
 
 ## The failure mode to watch for

@@ -1,6 +1,8 @@
 # Steel Away
 
-A comprehensive guide and toolkit for structural steel project managers leveraging Claude AI to streamline estimating, project coordination, and field operations.
+A comprehensive guide and toolkit with 24 ready-to-use templates and seven
+end-to-end programs for structural steel project managers leveraging Claude AI
+to streamline estimating, project coordination, and field operations.
 
 ---
 
@@ -18,6 +20,7 @@ Whether you're preparing bid packages, tracking RFIs, managing submittals, or co
 - **Project Scheduling** — Create and update erection sequences, delivery schedules, and milestone trackers
 - **Field Coordination** — Generate daily reports, safety documentation, and punch list tracking
 - **Contract Review** — Identify risk clauses, scope gaps, and change order opportunities
+- **Lifecycle Programs** — Carry controlled information from bid through fabrication, erection, billing, and closeout
 
 ## Who This Is For
 
@@ -74,6 +77,7 @@ steelaway/
 | Find a template for a task | [`prompts/README.md`](prompts/README.md) |
 | See what output looks like | [`examples/`](examples/) |
 | Chain several prompts | [`workflows/`](workflows/) |
+| Choose an end-to-end project program | [`docs/program-map.md`](docs/program-map.md) |
 | Write your own | [`docs/writing-prompts.md`](docs/writing-prompts.md) |
 | Know what must be double-checked | [`references/verification.md`](references/verification.md) |
 | Handle sensitive documents | [`docs/data-handling.md`](docs/data-handling.md) |
