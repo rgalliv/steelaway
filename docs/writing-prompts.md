@@ -1,6 +1,6 @@
 # Writing Your Own
 
-The twelve templates share a structure. It is worth understanding, because your
+The twenty-four templates share a structure. It is worth understanding, because your
 own tasks will not match them exactly.
 
 ## The five parts
