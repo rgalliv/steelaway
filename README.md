@@ -1,4 +1,4 @@
-# Claude for Steel PMs
+# Steel Away
 
 A comprehensive guide and toolkit for structural steel project managers leveraging Claude AI to streamline estimating, project coordination, and field operations.
 
@@ -6,7 +6,7 @@ A comprehensive guide and toolkit for structural steel project managers leveragi
 
 ## Overview
 
-**Claude for Steel PMs** bridges the gap between AI technology and the structural steel industry. This repository provides ready-to-use prompts, workflows, and best practices designed specifically for steel project managers, estimators, and field coordinators who want to work faster and smarter with Claude AI.
+**Steel Away** bridges the gap between AI technology and the structural steel industry. This repository provides ready-to-use prompts, workflows, and best practices designed specifically for steel project managers, estimators, and field coordinators who want to work faster and smarter with Claude AI.
 
 Whether you're preparing bid packages, tracking RFIs, managing submittals, or coordinating erection schedules — this toolkit helps you get more done with less effort.
 
@@ -54,7 +54,7 @@ Whether you're preparing bid packages, tracking RFIs, managing submittals, or co
 ## Repository Structure
 
 ```
-Claude-for-Steel-PMs/
+steelaway/
 ├── prompts/                # Ready-to-use prompt templates
 │   ├── estimating/         # Takeoff and bidding prompts
 │   ├── project-mgmt/       # Scheduling and coordination
