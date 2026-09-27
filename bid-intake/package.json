@@ -1,0 +1,1 @@
+{"name":"sns-bid-intake","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test test/*.test.mjs","test:backend":"node test/backend.mjs"},"dependencies":{"@supabase/supabase-js":"2.115.0","pdfjs-dist":"5.4.296"},"devDependencies":{"@electric-sql/pglite":"0.5.8"}}
