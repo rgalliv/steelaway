@@ -2,6 +2,16 @@ export const MAX_FILE=50*1024*1024;
 export const allowed=/\.(pdf|txt|md|csv|json|docx?|xlsx?|jpe?g|png|tiff?|eml|msg|zip|dwg|dxf)$/i;
 export function validateFile(file){if(!allowed.test(file.name))throw Error('Unsupported file type; save it as a supported document or archive.');if(file.size>MAX_FILE)throw Error('File exceeds 50 MiB. Split the package or ask the engineer about larger uploads.');if(file.size===0)throw Error('Empty file.');}
 export async function fingerprint(bytes){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');}
+// Bound serialized UTF-8, including JSON escaping, below the database's 750 kB limit.
+export function boundedExtraction(extracted){
+ const measure=pages=>new TextEncoder().encode(JSON.stringify(pages)).byteLength;
+ if(measure(extracted.pages)<=700000)return extracted;
+ const pages=[];for(const page of extracted.pages){let text=page.text;let lo=0,hi=text.length;
+  while(lo<hi){const mid=Math.ceil((lo+hi)/2);if(measure([...pages,{...page,text:text.slice(0,mid)}])<=700000)lo=mid;else hi=mid-1;}
+  if(lo>0)pages.push({...page,text:text.slice(0,lo)});if(lo<text.length)break;
+ }
+ return {pages,note:extracted.note+' Extraction limited by encoded size; review the original for remaining content.'};
+}
 export function packet(bid,sources){return `# ${bid.name}\n\nSOURCE REVIEW PACKET — not an approved estimate or bid\n\n`+sources.map(s=>`## ${s.name}\nCategory: ${s.category}\nStatus: ${s.status}\nSource ID: ${s.id}\nSHA-256: ${s.sha256}\nExtraction: ${s.extraction_note||'Text supplied / extracted'}\nOffice review: ${s.review_note||'Not reviewed'}\n\n`+s.extraction.map(p=>`### ${p.label}\n${p.text}\n`).join('\n')).join('\n');}
 export async function extract(file,bytes){
  if(/\.(txt|md|csv|json|eml)$/i.test(file.name)){const full=new TextDecoder().decode(bytes);return {pages:[{label:'Text / CSV source',text:full.slice(0,250000)}],note:full.length>250000?'Text truncated at 250,000 characters; review the original.':'Plain text; CSV values and email text are not interpreted as approved facts.'};}
