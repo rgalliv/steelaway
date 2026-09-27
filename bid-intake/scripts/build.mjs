@@ -1,0 +1,11 @@
+import {mkdir,cp,copyFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),target=new URL('../dist/',import.meta.url);
+await mkdir(target,{recursive:true});await cp(new URL('../public/',import.meta.url),target,{recursive:true});await cp(new URL('../src/',import.meta.url),target,{recursive:true});await mkdir(new URL('vendor/',target),{recursive:true});
+await copyFile(new URL('../node_modules/@supabase/supabase-js/dist/umd/supabase.js',import.meta.url),new URL('vendor/supabase.js',target));
+await copyFile(new URL('../node_modules/@supabase/supabase-js/LICENSE',import.meta.url),new URL('vendor/SUPABASE-LICENSE',target));
+for(const name of ['pdf.mjs','pdf.worker.mjs'])await copyFile(new URL('../node_modules/pdfjs-dist/build/'+name,import.meta.url),new URL('vendor/'+name,target));
+await copyFile(new URL('../node_modules/pdfjs-dist/LICENSE',import.meta.url),new URL('vendor/PDFJS-LICENSE',target));
+const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+if(!url||!key||!key.startsWith('sb_publishable_'))throw Error('Configure the existing public Supabase URL and publishable key');
+await writeFile(new URL('config.js',target),`export default ${JSON.stringify({url,key})};\n`);
+console.log('Built SNS private bid intake. No service credentials in browser.');
